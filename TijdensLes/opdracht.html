@@ -1,0 +1,36 @@
+<script>
+	function dikkewaarschuwing(){
+		alert("De apocalypse is begonnen");
+	}
+</script>
+
+<style>
+/* de p is een selector, in dit geval selecteert hij de <p> tags in de html code */
+	p{
+		background-color:red;
+	}
+	p.proberen{
+			background-color:green;
+			padding : 25px;
+			color: white;
+	}
+	textarea{
+			background-color:orange;
+	}
+	#middelste{
+		background-color:blue;
+		color: rgb(201, 21, 21);
+	}
+</style>
+
+<html>
+<b onclick="dikkewaarschuwing()"> hier </b>
+
+<p>nog een stuk tekst tussen</p>
+<p class="proberen">nog een stuk tekst tussen</p>
+<p>nog een stuk tekst tussen</p>
+
+
+<textarea id ="middelste" cols="40" rows="10" >hier weer wat tekst</textarea>
+<textarea cols="40" rows="10" >hier weer wat tekst</textarea>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Document</title>
+		
+		<style>
+		
+
+		</style>
+		
+		<script>
+			function naamweergeven(){
+				var deNaam = document.getElementById("mijntekst").value;
+			//alert("Welkom: "+deNaam);
+				document.getElementById("uitkomst").innerHTML = "Welkom: "+deNaam;
+				document.getElementById("mijntekst").style.backgroundColor = 'green';
+			}
+			function ToonDeDom(){
+				var deDOM = document.getElementsByTagName("html");
+				console.log(deDOM);
+			}
+		</script>	
+
+	</head>
+
+	<body>
+			<input type=text id="mijntekst">
+			<input type=button value="Klik hier" onclick="naamweergeven()">
+			<h3 id="uitkomst"> mijn huis is klein </h3>
+			<hr><hr><hr>
+			<input type=button value="DOM Tonen" onclick="ToonDeDom()">
+	</body>
+</html>
+	

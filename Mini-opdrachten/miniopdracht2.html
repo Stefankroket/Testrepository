@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Mini opdracht 2</title>
+
+    <script>
+    function detectE(word) {
+        var word = document.getElementById('input').value;
+        if (word.toLowerCase().includes("e")) { //hoe krijg ik het voor elkaar dat hij E of omtovert in een lowercase of ook herkent?
+            alert("De letter 'e' komt voor in dit woord.");
+        } else {
+            alert("De letter 'e' komt niet voor in dit woord.");
+        }
+    }   
+    </script>
+    
+</head>
+
+<body>
+    <input id= 'input' type="text" placeholder="vul hier een woord in">
+    <input type="button" value="Zit de letter 'e' in dit woord?" onclick="detectE()">
+</body>
+
+</html>

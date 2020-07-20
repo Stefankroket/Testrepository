@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>oefening</title>
+	
+	<style>
+		td{
+			border: 2px solid red;
+			width: 20px;
+			height: 40px;
+			color: white;
+		}
+	</style>
+	<script>
+		var counterkolom = [0,0,0,0,0];
+		var playerturn = 0;
+		
+		function kleurveranderen(){
+			document.getElementById("vakje"+ kolom + counterkolom[kolom]).style.backgroundColor = 'green';
+		}
+
+		function latenvallen(kolom){
+			var color;
+			if(playerturn == 0){
+				color = 'red';
+				playerturn = 1;
+			}else{
+				color = 'green';
+				playerturn = 0;
+			}
+			document.getElementById("vakje"+ kolom + counterkolom[kolom]).style.backgroundColor = color;
+			counterkolom[kolom]++;
+		}
+		//function arrayuitvoeren(){
+		//	getalarray[3]++;
+		//	alert(getalarray[3]);
+		//}
+	</script>	
+
+</head>
+<body>
+	<table border=2>
+		<tr>
+			<td id=vakje04 onclick=latenvallen() onmouseover=kleurveranderen()>X</td>
+			<td id=vakje14 onclick=latenvallen()>X</td>
+			<td id=vakje24 onclick=latenvallen()>X</td>
+			<td id=vakje34 onclick=latenvallen()>X</td>
+			<td id=vakje44 onclick=latenvallen()>X</td>
+		</tr>
+		<tr>
+			<td id=vakje03 onclick=latenvallen(0)>X</td>
+			<td id=vakje13 onclick=latenvallen(1)>X</td>
+			<td id=vakje23 onclick=latenvallen(2)>X</td>
+			<td id=vakje33 onclick=latenvallen(3)>X</td>
+			<td id=vakje43 onclick=latenvallen(4)>X</td>
+		</tr>
+		<tr>
+			<td id=vakje02 onclick=latenvallen(0)>X</td>
+			<td id=vakje12 onclick=latenvallen(1)>X</td>
+			<td id=vakje22 onclick=latenvallen(2)>X</td>
+			<td id=vakje32 onclick=latenvallen(3)>X</td>
+			<td id=vakje42 onclick=latenvallen(4)>X</td>
+		</tr>
+		<tr>
+			<td id=vakje01 onclick=latenvallen(0)>X</td>
+			<td id=vakje11 onclick=latenvallen(1)>X</td>
+			<td id=vakje21 onclick=latenvallen(2)>X</td>
+			<td id=vakje31 onclick=latenvallen(3)>X</td>
+			<td id=vakje41 onclick=latenvallen(4)>X</td>
+		</tr>
+		<tr>
+			<td id=vakje00 onclick=latenvallen(0)>X</td>
+			<td id=vakje10 onclick=latenvallen(1)>X</td>
+			<td id=vakje20 onclick=latenvallen(2)>X</td>
+			<td id=vakje30 onclick=latenvallen(3)>X</td>
+			<td id=vakje40 onclick=latenvallen(4)>X</td>
+		</tr>
+	</table>
+</body>
+</html>
+<!--//functionele doelstelling -> zichtbaar maken van grid // VAST
+//opknippen? ja
+//1 vakje
+//hoeveel 2x2?
+
+//technische strategie ->
+//tabel met 2x tr 2x td
+
+//coderen
+
+//Functionele doelstelling??	//GEEN TECHISCHE TERMEN
+//cel selecteren //concreet //doorvallen onderaan
+//opknippen? ja
+//klikken op kolom
+//opknippen? voor 1 kolom onderste vakje word rood
+//opknippen? nee dit is klein genoeg
+
+//Technische strategie
+//onderste td een ID geven = id td style.backgroundColor
+
+//coderen //SNEL MOGELIJK NAAR FINISH
+
+//functionele doelstelling // vakje naast kolom 1 rood onderin
+//Opknippen? nee
+
+//technische strategie
+//Andere kolom ook een id geven geven maar zelfde functie aanhalen
+
+//FUNCTIONELE DOELSTELLING
+//2e keer zelfde kolom dan gaat hij omhoog rood
+
+//TECHNISCHE STRATEGIE
+//Als rood is dan vakje 3
+
+//CODEREN

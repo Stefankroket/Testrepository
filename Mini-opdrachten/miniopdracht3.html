@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Mini opdracht 3</title>
+
+    <script>
+    function counte(word){
+        var word = document.getElementById('input').value;
+        var count = 0;
+        var e = "eE";
+
+        for (var i = 0; i < word.length; i++) {
+            if (e.indexOf(word[i]) > -1) {
+                count++;
+            }
+        }
+        alert("De letter 'e' komt " + count + " keer voor in dit woord.");
+    }
+
+        
+    </script>
+    
+</head>
+
+<body>
+    <input id= 'input' type="text" placeholder="vul hier een woord in">
+    <input type="button" value="Hoeveel keer zit de letter 'e' in dit woord?" onclick="counte()">
+    <br>
+    <p id="ShowResult"></h3>
+</body>
+
+</html>

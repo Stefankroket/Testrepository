@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Mini opdracht 1</title>
+
+    <script>
+        function giveAlert(){
+            var message = document.getElementById('filledin').value; //met .value haal je de waarde op van wat er in de tekst is ingevuld. 
+            if (message == 'hallo'){
+                alert("Waat");
+            } else if (message == 'doei'){
+                alert("nou ja");
+            } else {
+                alert("Je moest hallo of doei invullen...")
+            }  
+        }
+        window.addEventListener("keydown", checkKeyPress, false);
+
+        function checkKeyPress(key){
+            if (key.keyCode == 13){
+                giveAlert();
+            }
+        }
+    </script>
+    
+</head>
+
+<body>
+    <input id='filledin' type="text" placeholder='vul hier hallo of doei in'>
+    <input id='button1' type=button value='voer in' onclick="giveAlert()">
+</body>
+
+</html>

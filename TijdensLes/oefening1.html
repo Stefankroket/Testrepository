@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>oefening</title>
+	
+	<style>
+	
+
+	</style>
+	<script>
+		function cijfergeven(getal){
+			if(getal == 5){
+				document.getElementById("uitkomst").style.backgroundColor = 'red';
+			}
+			else if(getal == 6){
+				document.getElementById("uitkomst").style.backgroundColor = 'orange';
+			}
+			else{
+				document.getElementById("uitkomst").style.backgroundColor = 'green';	
+			}
+			document.getElementById("uitkomst").innerHTML = document.getElementById("naam").value + " heeft een " + getal + " gehaald. " ;
+		}
+		
+	</script>	
+
+</head>
+<body>
+		<input type=text id="naam">
+		<input type=button value="5" onclick="cijfergeven(5)">
+		<input type=button value="6" onclick="cijfergeven(6)">
+		<input type=button value="7" onclick="cijfergeven(7)">
+		<input type=button value="8" onclick="cijfergeven(8)">
+
+		<br><br>
+		<div id=uitkomst> Wie heeft wat voor cijfer? </div>
+
+</body>
+</html>
+<!--Maak een invoerveld waar ik een naam invul.
+Maak erachter 4 knoppen tw 5 6 7 8
+Als ik een naam invoer en op een knop klik toont de pagina 
+Johan heeft een 5 gehaald IN HET ROOD
+Als het een 6 is dan Oranje
+Als het 7 of 8 is dan Groen

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Connect Four!</title>
+	
+	<style>
+    table{
+        border-spacing: -0;
+        overflow: hidden;
+    }
+
+    td{
+        border-style:solid;
+        border-width: 0.1px;
+    }
+
+
+    td:hover::before{ 
+        background: beige;
+        content: '';    
+        left: 0;
+        position: absolute;  
+        top: -5000px;
+        width: 100%;
+        z-index: -1;    
+    }
+
+    td, th{
+        padding: 30px;
+        position: relative;
+        cursor: pointer;
+        border-radius: 45px;
+    }
+
+	</style>
+    
+    <script>
+        var countcolumn = [0,0,0,0,0,0,0];
+        var color;
+        var playerturn;
+        var tableCell = document.getElementsByTagName('td');
+        var tablerow = document.getElementsByTagName('tr');
+		
+		function placeStone(column){
+            if(playerturn == 0){
+				color = 'crimson';
+				playerturn = 1;
+			}else{
+				color = 'gold';
+				playerturn = 0;
+			}
+
+			document.getElementById("space" + column + countcolumn[column]).style.backgroundColor = color;
+			countcolumn[column]++;
+		}
+
+
+	</script>	
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th id=column00 onclick=placeStone(0)></th>
+            <th id=column01 onclick=placeStone(1)></th>
+            <th id=column02 onclick=placeStone(2)></th>
+            <th id=column03 onclick=placeStone(3)></th>
+            <th id=column04 onclick=placeStone(4)></th>
+            <th id=column05 onclick=placeStone(5)></th>
+            <th id=column06 onclick=placeStone(6)></th>
+        </tr>
+
+        <tr>
+            <td id=space05 onclick=placeStone(0)></td>
+            <td id=space15 onclick=placeStone(1)></td>
+            <td id=space25 onclick=placeStone(2)></td>
+            <td id=space35 onclick=placeStone(3)></td>
+            <td id=space45 onclick=placeStone(4)></td>
+            <td id=space55 onclick=placeStone(5)></td>
+            <td id=space65 onclick=placeStone(6)></td>
+        </tr>
+        <tr>
+            <td id=space04 onclick=placeStone(0)></td>
+            <td id=space14 onclick=placeStone(1)></td>
+            <td id=space24 onclick=placeStone(2)></td>
+            <td id=space34 onclick=placeStone(3)></td>
+            <td id=space44 onclick=placeStone(4)></td>
+            <td id=space54 onclick=placeStone(5)></td>
+            <td id=space64 onclick=placeStone(6)></td>
+        </tr>
+        <tr>
+            <td id=space03 onclick=placeStone(0)></td>
+            <td id=space13 onclick=placeStone(1)></td>
+            <td id=space23 onclick=placeStone(2)></td>
+            <td id=space33 onclick=placeStone(3)></td>
+            <td id=space43 onclick=placeStone(4)></td>
+            <td id=space53 onclick=placeStone(5)></td>
+            <td id=space63 onclick=placeStone(6)></td>
+        </tr>
+        <tr>
+            <td id=space02 onclick=placeStone(0)></td>
+            <td id=space12 onclick=placeStone(1)></td>
+            <td id=space22 onclick=placeStone(2)></td>
+            <td id=space32 onclick=placeStone(3)></td>
+            <td id=space42 onclick=placeStone(4)></td>
+            <td id=space52 onclick=placeStone(5)></td>
+            <td id=space62 onclick=placeStone(6)></td>
+        </tr>
+        <tr>
+            <td id=space01 onclick=placeStone(0)></td>
+            <td id=space11 onclick=placeStone(1)></td>
+            <td id=space21 onclick=placeStone(2)></td>
+            <td id=space31 onclick=placeStone(3)></td>
+            <td id=space41 onclick=placeStone(4)></td>
+            <td id=space51 onclick=placeStone(5)></td>
+            <td id=space61 onclick=placeStone(6)></td>
+        </tr>
+        <tr>
+            <td id=space00 onclick=placeStone(0)></td>
+            <td id=space10 onclick=placeStone(1)></td>
+            <td id=space20 onclick=placeStone(2)></td>
+            <td id=space30 onclick=placeStone(3)></td>
+            <td id=space40 onclick=placeStone(4)></td>
+            <td id=space50 onclick=placeStone(5)></td>
+            <td id=space60 onclick=placeStone(6)></td>
+        </tr>
+        
+    </table>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<html>
+<head>
+
+<script>
+
+	var counterkolom = [0,0];
+	function latenvallen( kolom ){
+		document.getElementById("vakje"+kolom +counterkolom[kolom]).style.backgroundColor = 'red';
+		counterkolom[kolom]++;
+	}
+
+</script>
+</head>
+<body>
+
+
+</body>
+	<table >
+        <tr>
+            <td id=vakje02 onclick=latenvallen(0)>X</td>
+            <td id=vakje12 onclick=latenvallen(1)>X</td>
+        </tr>
+		<tr>
+            <td id=vakje01 onclick=latenvallen(0)>X</td>
+            <td id=vakje11 onclick=latenvallen(1)>X</td>
+        </tr>
+		<tr>
+            <td id=vakje00 onclick=latenvallen(0)>X</td>
+            <td id=vakje10 onclick=latenvallen(1)>X</td>
+        </tr>
+       
+	</table>
+</html>
