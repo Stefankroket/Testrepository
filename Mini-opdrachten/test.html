@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var buttonHistory ="";
+        var buttonsPressed = "";
+        var timePressedA = 0;
+        var timePressedB = 0;
+        var timePressedC = 0;
+        var timePressedD = 0;
+
+
+        function clickedButton(buttonType){
+            
+            var timePressedButton;
+
+            if (buttonType == "A"){
+                timePressedA++;
+                timePressedButton = timePressedA;
+            }
+            if (buttonType == "B"){
+                timePressedB++;
+                timePressedButton = timePressedB;
+            }
+            if (buttonType == "C"){
+                timePressedC++;
+                timePressedButton = timePressedC;
+            }
+            if (buttonType == "D"){
+                timePressedD++;
+                timePressedButton = timePressedD;
+            }
+
+            buttonsPressed = buttonsPressed + buttonType;
+            var amountOfTimes = 0;
+            for (var i=0; i<buttonsPressed.length; i++){
+                if (buttonsPressed.substring(i,i+1).search(buttonType)>-1){
+                    amountOfTimes++;
+                } 
+                if (amountOfTimes > 1){
+                    alert("You have pressed " + buttonType + " " + timePressedButton + ", time(s).");
+                }
+            }
+
+            buttonHistory = buttonHistory + "U heeft op knop " + buttonType + " geklikt. <br />";
+            document.getElementById("uitkomst").innerHTML = buttonHistory;
+
+
+            
+
+        }
+
+    
+
+    </script>
+</head>
+<body>
+
+    <input type=button value="A" onclick="clickedButton('A')">
+    <input type=button value="B" onclick="clickedButton('B')">
+    <input type=button value="C" onclick="clickedButton('C')">
+    <input type=button value="D" onclick="clickedButton('D')">
+    <p id="uitkomst"></p>
+
+
+
+</body>
+</html>

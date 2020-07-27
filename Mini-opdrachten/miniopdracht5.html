@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>mini opdracht 5</title>
+	
+	<style>
+	
+
+	</style>
+	
+	<script>
+        var count = {A: 0, B: 0, C: 0, D:0};
+        var rememberButton = "";
+
+		function clickButton(button){
+            rememberButton = document.getElementById("naam").value + " heeft op knop " + button + " geklikt.";
+		    document.getElementById("uitkomst").innerHTML = rememberButton;
+        
+        var countButton = count[button]
+            if (countButton >= 1)
+                alert("Je hebt al " + countButton + " keer op " + button + " geklikt.");
+                count[button] = ++countButton;
+        }
+
+	</script>	
+
+</head>
+<body>
+        <p> Vul eerst je naam in en klik daarna op een knop. </p>
+        <input id="naam" type="text" placeholder="vul hier je naam in">
+        <br></br>
+		<input type=button value="A" onclick="clickButton('A')">
+		<input type=button value="B" onclick="clickButton('B')">
+		<input type=button value="C" onclick="clickButton('C')">
+		<input type=button value="D" onclick="clickButton('D')">
+
+		<br><br>
+        <div id=uitkomst></div>
+
+</body>
+</html>
